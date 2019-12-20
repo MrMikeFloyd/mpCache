@@ -1,4 +1,6 @@
-package de.maik.mpcache;
+package de.maik.mpcache.control;
+
+import de.maik.mpcache.entity.User;
 
 import javax.enterprise.context.ApplicationScoped;
 import java.util.ArrayList;

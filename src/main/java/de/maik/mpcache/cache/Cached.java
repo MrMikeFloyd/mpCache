@@ -1,4 +1,4 @@
-package de.maik.mpcache;
+package de.maik.mpcache.cache;
 
 import javax.interceptor.InterceptorBinding;
 import java.lang.annotation.ElementType;

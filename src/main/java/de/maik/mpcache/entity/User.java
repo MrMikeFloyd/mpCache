@@ -1,4 +1,4 @@
-package de.maik.mpcache;
+package de.maik.mpcache.entity;
 
 public class User {
     private int id;
@@ -7,6 +7,7 @@ public class User {
     private String homeCity;
 
     public User(int id, String firstName, String lastName, String homeCity) {
+        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.homeCity = homeCity;

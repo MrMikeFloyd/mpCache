@@ -1,4 +1,4 @@
-package de.maik.mpcache;
+package de.maik.mpcache.cache;
 
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
