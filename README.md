@@ -1,8 +1,9 @@
-# MicroProfile generated Application
+# mpCache Demo application
 
-## Introduction
+This minimalistic sample application demonstrates the concept of decorating arbitrary method calls transparently by using custom annotations and interceptors. The example showcases an on-demand read-through cache that can be linked to whatever method calls the developer would like cached. In this example, these would be calls to a service retrieving user records.
+The sample application is a Microprofile REST app powered by an OpenLiberty application server. The application stub was generated using the [MicroProfile Starter](https://start.microprofile.io).
 
-MicroProfile Starter has generated this MicroProfile application for you.
+## How to run
 
 The generation of the executable jar file can be performed by issuing the following command
 
@@ -22,18 +23,9 @@ unit and integration tests are run on pressing Enter in the command terminal; yo
     mvn liberty:dev
 
 
+To explore the REST endpoints exposed by the application, open your browser at the following URL
 
-To launch the test page, open your browser at the following URL
-
-    http://localhost:8181/index.html
-
-## Specification examples
-
-By default, there is always the creation of a JAX-RS application class to define the path on which the JAX-RS endpoints are available.
-
-Also, a simple Hello world endpoint is created, have a look at the class **HelloController**.
-
-More information on MicroProfile can be found [here](https://microprofile.io/)
+    http://localhost:8181/openapi/ui/
 
 
 
