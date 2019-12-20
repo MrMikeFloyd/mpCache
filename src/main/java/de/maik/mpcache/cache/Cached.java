@@ -7,8 +7,9 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Annotation declaration that allows binding it
- * on methods
+ * Enables caching on the annotated method call.
+ * The caching mechanism will use the method's arguments as
+ * key, and cache the method's return value.
  */
 @InterceptorBinding
 @Retention(RetentionPolicy.RUNTIME)
