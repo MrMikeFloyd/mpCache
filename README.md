@@ -2,6 +2,7 @@
 
 This minimalistic sample application demonstrates the concept of decorating arbitrary method calls transparently by using custom annotations and interceptors. The example showcases an on-demand read-through cache that can be linked to whatever method calls the developer would like cached. In this example, these would be calls to a service retrieving user records.
 The sample application is a Microprofile REST app powered by an OpenLiberty application server. The application stub was generated using the [MicroProfile Starter](https://start.microprofile.io).
+In the showcase, the `getById` method in the `UserService` class is being cached. All that is needed is the `@Cached` annotation. The logic for the cache decorator resides in the `CacheInterceptor` class. Google's Guava Cache is used as a cache implementation.
 
 ## How to run
 
