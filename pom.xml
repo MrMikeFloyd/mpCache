@@ -40,6 +40,12 @@
             <artifactId>logback-classic</artifactId>
             <version>1.2.3</version>
         </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.5.2</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
     <build>
         <finalName>mpcache</finalName>
@@ -79,6 +85,10 @@
                                 <jwt.issuer>https://server.example.com</jwt.issuer>
                             </bootstrapProperties>
                         </configuration>
+                    </plugin>
+                    <plugin>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>2.22.2</version>
                     </plugin>
                 </plugins>
             </build>
