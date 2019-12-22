@@ -10,8 +10,8 @@ import org.slf4j.LoggerFactory;
 import javax.annotation.Priority;
 import javax.interceptor.AroundInvoke;
 import javax.interceptor.Interceptor;
-import javax.interceptor.InterceptorBinding;
 import javax.interceptor.InvocationContext;
+import java.lang.reflect.Array;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 
@@ -25,13 +25,14 @@ import java.util.concurrent.TimeUnit;
 public class CacheInterceptor {
     private Cache<Object, Object> cache;
     private static final long VALIDITY_PERIOD = 10;
-    Logger log = LoggerFactory.getLogger(UserService.class);
+    Logger log = LoggerFactory.getLogger(CacheInterceptor.class);
 
     public CacheInterceptor() {
         initializeCache();
     }
 
     private void initializeCache() {
+        log.info("Inizializing Cache.");
         cache = CacheBuilder.newBuilder()
                 .expireAfterWrite(VALIDITY_PERIOD, TimeUnit.MINUTES)
                 .build();
@@ -42,7 +43,7 @@ public class CacheInterceptor {
         log.info("Invoking Cache.");
         try {
             return cache.get(
-                    ic.getParameters(),
+                    Array.get(ic.getParameters(), 0),
                     ic::proceed);
         } catch (UncheckedExecutionException runtimeException) {
             throw runtimeException.getCause();

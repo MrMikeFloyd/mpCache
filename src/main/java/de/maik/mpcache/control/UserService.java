@@ -14,7 +14,10 @@ public class UserService {
 
     Logger log = LoggerFactory.getLogger(UserService.class);
 
-    @Cached
+    public UserService() {
+        log.info("Initializing User Service.");
+    }
+
     public List<User> getAll() {
         log.info("Invoking getAll.");
         List<User> allUsers = new ArrayList<>();
