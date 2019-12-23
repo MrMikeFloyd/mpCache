@@ -1,7 +1,7 @@
 package de.maik.mpcache.entity;
 
 public class User {
-    private int id;
+    private Integer id;
     private String firstName;
     private String lastName;
     private String homeCity;
@@ -13,7 +13,7 @@ public class User {
         this.homeCity = homeCity;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 

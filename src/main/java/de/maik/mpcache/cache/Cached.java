@@ -7,7 +7,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Enables caching on the annotated method call.
+ * Enables read-through caching on the annotated method call.
  * The caching mechanism will use the method's arguments as
  * key, and cache the method's return value.
  */
